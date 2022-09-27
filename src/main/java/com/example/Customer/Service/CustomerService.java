@@ -8,7 +8,7 @@ import com.example.Customer.Entity.Customer;
 import com.example.Customer.Repository.CustomerRepository;
 
 
-
+@Service
 public class CustomerService {
 	
 	@Autowired
