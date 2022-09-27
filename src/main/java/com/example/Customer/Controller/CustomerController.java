@@ -16,7 +16,7 @@ import com.example.Customer.Service.CustomerService;
 
 
 
-
+@RestController
 public class CustomerController {
 	
 	@Autowired
@@ -45,7 +45,7 @@ public class CustomerController {
 		return service.findCustomerById(id);
 	}
 	
-	@GetMapping("/getCustomerById/{id}")
+	@GetMapping("/getCustomerByName/{id}")
 	public Customer getCustomerByName(@PathVariable String name)
 	{
 		return service.findCustomerByName(name);
@@ -57,8 +57,8 @@ public class CustomerController {
 		return service.updateCustomer(customer);
 	}
 	
-	@DeleteMapping("/deleteDoctor/{id}")
-	public String deleteEmployee(@PathVariable int id)
+	@DeleteMapping("/deleteCustomer/{id}")
+	public String deleteCustomer(@PathVariable int id)
 	{
 		return service.deleteCustomer(id);
 	}
